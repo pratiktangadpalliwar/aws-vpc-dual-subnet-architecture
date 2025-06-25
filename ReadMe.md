@@ -29,7 +29,7 @@ This setup is ideal for separating frontend (public-facing) and backend (interna
 
 ## Key Features
 
-- **Custom VPC** with CIDR `10.0.0.0/16`
+- **Custom VPC** with CIDR
 - Public and private **subnets** across same AZ
 - **Internet Gateway** for public access
 - **NAT Gateway** for private outbound access
@@ -40,11 +40,11 @@ This setup is ideal for separating frontend (public-facing) and backend (interna
 
 ## Step-by-Step Deployment
 
-1. **Create VPC** with CIDR `10.0.0.0/16`
+1. **Create VPC** with CIDR `<CIDR Range>`
 2. **Attach IGW** to the VPC
 3. **Create Subnets**:
-   - `public-subnet` → `10.0.1.0/24`
-   - `private-subnet` → `10.0.2.0/24`
+   - `public-subnet` → `<CIDR Range>`
+   - `private-subnet` → `<CIDR Range>`
 4. **Create and Associate Route Tables**:
    - `public-route-table` → route to IGW
    - `private-route-table` → route to NAT Gateway
